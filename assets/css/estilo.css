@@ -1,0 +1,75 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+}
+.cena{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #01070a;
+    overflow: hidden;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+}
+
+.cena i{
+    position: absolute;
+    top: -250px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: animateStars linear infinite;
+}
+@keyframes animateStars{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(200vh);
+    }
+}
+.cena .foguete{
+    position: absolute;
+    pointer-events: none;
+    animation: animate 0.5s ease infinite;
+    z-index: 2;
+    transition: 0.1s;
+}
+@keyframes animate {
+    0%,100%{
+        transform: translateY(-52px)translateX(-50%);
+    }
+    50%{
+        transform: translateY(-48px)translateX(-50%);
+    }
+}
+.cena .foguete::before{
+    content: '';
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(#00d0FF, transparent);
+    z-index: -1;
+}
+.cena .foguete::after{
+    content: '';
+    position: absolute;
+    bottom: -140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 150px;
+    background: linear-gradient(#00d0FF, transparent);
+    z-index: -1;
+    filter: blur(20px);
+}
+.cena:active .foguete::before,
+.cena:active .foguete::after{
+    background: linear-gradient(#ff9100, transparent);
+    bottom: -190px;
+    height: 200px;
+    filter: blur(2px);
+}
