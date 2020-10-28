@@ -4,7 +4,7 @@ document.addEventListener("mousemove", function(e){
     foguete.style.top = e.offsetY+'px';
 });
 function estrelas(){
-    let count = 20;
+    let count = 30;
     let cena = document.querySelector('.cena');
     let i = 0;
 
