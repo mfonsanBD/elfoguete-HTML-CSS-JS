@@ -1,7 +1,12 @@
+@font-face{
+	font-family: 'Montserrat';
+	src: url(Montserrat-SemiBold.otf);
+}
 *{
    margin: 0;
    padding: 0;
-   box-sizing: border-box; 
+   box-sizing: border-box;
+   font-family: 'Montserrat';
 }
 .cena{
     position: relative;
@@ -81,4 +86,9 @@
     padding: 20px 40px;
     background-color: black;
     color: white;
+    text-transform: uppercase;
+    border: white thin solid;
+}
+ponto{
+    color:#ff9100;
 }
